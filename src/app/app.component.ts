@@ -25,7 +25,7 @@ export class AppComponent {
   }
 
   deleteItem(item: Item) {
-    
+
   }
 
 }
