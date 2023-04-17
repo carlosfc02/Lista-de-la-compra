@@ -11,8 +11,7 @@ describe('AppComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ AppComponent ],
       imports: [ FormsModule ]
-    })
-      .compileComponents();
+    }).compileComponents();
   });
 
   beforeEach(() => {
