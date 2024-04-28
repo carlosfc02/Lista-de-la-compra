@@ -21,7 +21,7 @@ describe('AppComponent', () => {
   });
 
 
-  test('should add a new item to the list', () => {
+  it('should add a new item to the list', () => {
     const itemName = 'Leche';
     const itemInput = fixture.nativeElement.querySelector('input');
     itemInput.value = itemName;
@@ -37,7 +37,7 @@ describe('AppComponent', () => {
     expect(component.items[0].name).toBe(itemName);
   });
 
-  test('should complete an item in the list', () => {
+  it('should complete an item in the list', () => {
     const itemName = 'Leche';
     const newItem = { name: itemName, completed: false };
     component.items.push(newItem);
@@ -54,7 +54,7 @@ describe('AppComponent', () => {
     expect(component.items[0].completed).toBe(true);
   });
 
-  test('should delete an item from the list', () => {
+  it('should delete an item from the list', () => {
     const itemName = 'Leche';
     const newItem = { name: itemName, completed: false };
     component.items.push(newItem);
