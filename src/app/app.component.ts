@@ -15,6 +15,7 @@ export class AppComponent {
 
   items: Item[] = [];
   newItemName: string = '';
+  menuDesplegable: boolean = false;
 
   addItem() {
     const newItem: Item = {name:this.newItemName, completed:false};
@@ -47,10 +48,6 @@ export class AppComponent {
     this.items =[];
   }
 
-  filterCompletedItems(){
-
-  }
-
   countIncompleteItems() {
     let numIncompleteItems = 0;
     for (let i = 0; i < this.items.length; i++) {
@@ -69,6 +66,10 @@ export class AppComponent {
       }
     }
     return numCompleteItems;
+  }
+
+  clearCompletedItems(){
+    this.items = this.items.filter(item => !item.completed);
   }
 
 }
