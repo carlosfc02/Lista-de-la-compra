@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
+
 
 interface Item {
   name: string;
@@ -13,9 +14,9 @@ interface Item {
 })
 export class AppComponent {
 
+  headerFather = "Lista de la compra";
   items: Item[] = [];
   newItemName: string = '';
-  menuDesplegable: boolean = false;
 
   addItem() {
     const newItem: Item = {name:this.newItemName, completed:false};
